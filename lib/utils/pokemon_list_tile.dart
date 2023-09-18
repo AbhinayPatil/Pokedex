@@ -26,15 +26,19 @@ class PokemonListTile extends StatelessWidget {
       ),
       child: Wrap(
         alignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.end,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              height: 80,
-              width: 80,
-              child: SvgPicture.network(
-                imageUrl,
-                fit: BoxFit.scaleDown,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 80,
+                width: 80,
+                child: SvgPicture.network(
+                  imageUrl,
+                  fit: BoxFit.scaleDown,
+                ),
               ),
             ),
           ),
